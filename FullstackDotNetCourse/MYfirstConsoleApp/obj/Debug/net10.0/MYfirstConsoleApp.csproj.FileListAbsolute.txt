@@ -1,0 +1,14 @@
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/bin/Debug/net10.0/MYfirstConsoleApp
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/bin/Debug/net10.0/MYfirstConsoleApp.deps.json
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/bin/Debug/net10.0/MYfirstConsoleApp.runtimeconfig.json
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/bin/Debug/net10.0/MYfirstConsoleApp.dll
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/bin/Debug/net10.0/MYfirstConsoleApp.pdb
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.AssemblyInfoInputs.cache
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.AssemblyInfo.cs
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.csproj.CoreCompileInputs.cache
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.dll
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/refint/MYfirstConsoleApp.dll
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.pdb
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/MYfirstConsoleApp.genruntimeconfig.cache
+/Users/ssgmcollege/project1/Full stack .net/FullstackDotNetCourse/MYfirstConsoleApp/obj/Debug/net10.0/ref/MYfirstConsoleApp.dll
