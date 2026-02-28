@@ -1,0 +1,71 @@
+using System;
+
+public class Vehicle
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public int Year { get; set; }
+
+    public Vehicle(string make, string model, int year)
+    {
+        Make = make;
+        Model = model;
+        Year = year;
+        Console.WriteLine("Vehicle constructor called.");
+    }
+
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Vehicle: {Year} {Make} {Model}");
+    }
+
+    public virtual void Move()
+    {
+        Console.WriteLine("The vehicle is moving.");
+    }
+}
+
+public class Car : Vehicle
+{
+    public int NumberOfDoors { get; set; }
+
+    // Constructor for Car
+    public Car(string make, string model, int year, int numberOfDoors) 
+        : base(make, model, year) // Calls the base class constructor
+    {
+        NumberOfDoors = numberOfDoors;
+        Console.WriteLine("Car constructor called.");
+    }
+
+    // Overriding the Move method from the base class
+    public override void Move()
+    {
+        Console.WriteLine($"The {Make} {Model} is driving on the road.");
+    }
+
+    public void OpenTrunk()
+    {
+        Console.WriteLine("The trunk is open.");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {  
+
+        // In your Program.cs or another class:
+        Car myCar = new Car("Toyota", "Camry", 2023, 4);
+
+        // Accessing inherited properties and methods
+        myCar.DisplayInfo(); // Output: Vehicle: 2023 Toyota Camry
+        Console.WriteLine($"Number of doors: {myCar.NumberOfDoors}"); // Output: Number of doors: 4
+
+        // Calling the overridden method
+        myCar.Move(); // Output: The Toyota Camry is driving on the road.
+
+        // Calling a method specific to Car
+        myCar.OpenTrunk(); // Output: The trunk is open.
+    }
+}
+
