@@ -99,3 +99,49 @@ Hands-on Exploration (Conceptual):
 While we won't be writing code for performance tuning in this introductory lesson, it's important to be aware of these benefits. When you start building your first ASP.NET Core Web API, you'll be using a framework that is inherently fast and efficient. As you progress, you'll learn techniques to further optimize your application's performance, such as effective caching strategies and asynchronous programming.
 
 The combination of cross-platform flexibility and high performance makes ASP.NET Core a compelling choice for modern web development, enabling developers to build robust, scalable, and efficient applications for a global audience.
+
+## Exploring the ASP.NET Core Project Structure
+
+Understanding the default project structure of an ASP.NET Core application is crucial for navigating your codebase, locating important files, and comprehending how different components interact. When you create a new ASP.NET Core Web API project in Visual Studio, it comes with a well-organized set of files and folders that follow established conventions. Let's break down the typical structure:
+
+Default Project Structure (Web API Example):
+
+Consider a basic ASP.NET Core Web API project. You'll typically find the following key elements:
+
+- Program.cs: This is the entry point of your application. In modern .NET versions (starting with .NET 6), this file is significantly simplified. It contains the CreateHostBuilder method (or directly the WebApplication.CreateBuilder() and app.Run() calls) which configures the host, sets up the web application, and defines the middleware pipeline. It's where your application's lifecycle begins and ends.
+- Startup.cs (Older .NET versions, now integrated into Program.cs for .NET 6+): In older versions of ASP.NET Core (.NET 5 and earlier), the Startup.cs file was central to application configuration. It contained two key methods:
+
+    - ConfigureServices(IServiceCollection services): This method is used to register services (like databases, authentication, MVC, etc.) with the application's dependency injection container.
+    - Configure(IApplicationBuilder app, IWebHostEnvironment env): This method is used to configure the HTTP request pipeline by adding middleware components.
+
+- For .NET 6 and later, these configurations are largely moved into Program.cs, making the startup process more streamlined.
+- Controllers/ Folder: This directory typically houses your API controllers. Controllers are classes that handle incoming HTTP requests, process them, and return HTTP responses. For a Web API project, these controllers will often inherit from ControllerBase and contain methods (actions) that map to specific HTTP verbs (GET, POST, PUT, DELETE) and routes.
+
+- Models/ Folder: This folder is used to store your application's data models. These are typically Plain Old C# Objects (POCOs) that represent the data your API will work with (e.g., a Product model, a User model). These models are often used for request and response payloads.
+- Properties/ Folder: Contains project-specific properties, including launchSettings.json.
+- launchSettings.json: This file defines settings for how your application is launched during development, including the URLs it will listen on and environment variables. It's crucial for debugging and running your application locally.
+- appsettings.json: This file stores configuration settings for your application, such as database connection strings, logging levels, and other application-specific parameters. It's part of ASP.NET Core's flexible configuration system.
+- .csproj File (e.g., YourProjectName.csproj): This is the project file that defines your project's metadata, dependencies (NuGet packages), build configurations, and other project settings.
+- wwwroot/ Folder (for Web Applications, less common for pure APIs): If you are building a web application that serves static files (HTML, CSS, JavaScript, images), this folder is used to store them. These files are directly accessible via HTTP.
+
+Hands-on Component: Exploring the Default Project Structure
+
+Let's walk through how to explore this structure:
+
+- Create a New Project: Open Visual Studio 2022. Select 'Create a new project'. Search for 'ASP.NET Core Web API' and select the template. Click 'Next'.
+- Configure Project: Give your project a name (e.g., MyFirstApi) and choose a location. Click 'Next'.
+- Additional Information: Select the desired .NET framework version (e.g., .NET 6.0 LTS or later). Ensure 'Use controllers' is checked (for a controller-based API). You can leave 'Enable OpenAPI support' checked, as it's useful for testing. Click 'Create'.
+- Examine the Solution Explorer: Once the project is created, look at the 'Solution Explorer' pane in Visual Studio. You will see the folders and files mentioned above.
+- Open Program.cs: Double-click on Program.cs to open it. Observe the simplified structure. You'll see calls to WebApplication.CreateBuilder(args), configuration of services using builder.Services, and configuration of the request pipeline using app.MapControllers() and app.Run().
+- Inspect the Controllers Folder: Expand the Controllers folder. You'll likely find a default controller, such as WeatherForecastController. Open it to see how it's structured with actions (methods) decorated with attributes like [HttpGet].
+- Review launchSettings.json: Locate the Properties folder and open launchSettings.json. Examine the different profiles (e.g., 'IIS Express', 'YourProjectName') and note the applicationUrl settings, which define the local URLs your API will be accessible at.
+- Check appsettings.json: Open appsettings.json. You'll see basic configuration for logging.
+
+By familiarizing yourself with this structure, you'll be well-prepared to add your own controllers, models, and configurations as you build out your Web APIs.
+
+## The ASP.NET Core Middleware Pipeline: Handling Requests
+
+![alt text](../images/lesson_illustration_4163232882366998119.png)
+
+
+
